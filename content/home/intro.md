@@ -23,8 +23,6 @@ I am a Master's student at Princeton University in Computer Science, where I wor
 
 I'm interested in reproducing collective behavior and collective intelligence found in the natural world. This spans anything from understanding the dynamics of coupled robotic swarms using models from physics to modeling the activation of biological units that underly human cognition. Understanding how groups of agents in the natural world are optimized to solve their problems would aid engineers and scientists in building more efficient AI teams and is a problem area that spans computer science, robotics, biology, and more.
 
-I am interested in questions that arise from the interaction between AI systems and the humans that implement them: how can we design systems that are adaptable to the needs of different users? How can we model human social inference and interaction, and how might our understanding shape the systems we design? How should AI researchers and engineers reason about the ethical implications of their work?
-
 Previously, I received my A.B in Computer Science with a secondary in Economics and Chinese Language Citation from Harvard University. My undergraduate thesis, advised by Prof. David Parkes and Dr. Sarah Keren, applied market-based techniques to enable cooperative multi-robot environment mapping under uncertainty. 
 
 <!-- 👋 Hi, there! I'm **Alice**, a machine learning researcher at Netflix.
