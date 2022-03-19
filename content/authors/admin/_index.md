@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Alice Wu (吳恩達)
+title: Kathryn Wantlin
 
 # Is this the primary user of the site?
 superuser: true
@@ -9,8 +9,8 @@ superuser: true
 role: ''
 
 # Status emoji
-status:
-  icon: ☕️
+# status:
+#   icon: ☕️
 
 # Organizations/Affiliations
 #organizations:
@@ -45,12 +45,12 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'about/#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/wowchemy
-- icon: instagram
-  icon_pack: fab
-  link: https://instagram.com/geocushen
+# - icon: twitter
+#   icon_pack: fab
+#   link: https://twitter.com/wowchemy
+# - icon: instagram
+#   icon_pack: fab
+#   link: https://instagram.com/geocushen
 
 # Uncomment below for Github link
 # - icon: github
