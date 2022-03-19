@@ -10,13 +10,13 @@ weight: 10
 
 author: admin
 
-#design:
-#  background:
-#    color: '#090a0b'
-#    text_color_light: true
-#    video:
-#      path:  # enter filename of a video in /assets/media
-#  css_class: fullscreen
+design:
+ background:
+   color: '#090a0b'
+   text_color_light: true
+   video:
+     path:  # enter filename of a video in /assets/media
+ css_class: fullscreen
 ---
 
 I am a Master's student at Princeton University in Computer Science, where I work within the fields of machine learning and multi-agent systems, advised by Prof. Naomi Leonard.
