@@ -44,7 +44,7 @@ bio: My research interests include distributed robotics, mobile computing and pr
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:kw2960@princeton.edu'  # For a direct email link, use "mailto:test@example.org".
+  link: 'kw2960@princeton.edu'  # For a direct email link, use "mailto:test@example.org".
 # - icon: twitter
 #   icon_pack: fab
 #   link: https://twitter.com/wowchemy
