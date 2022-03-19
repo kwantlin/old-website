@@ -21,7 +21,7 @@ design:
 
 I am a Master's student at Princeton University in Computer Science, where I work within the fields of machine learning and multi-agent systems, advised by Prof. Naomi Leonard.
 
-I'm broadly interested in developing algorithms for learning structure from complex data and leveraging this structure to create more efficient, adaptable processes. Most recently, I've worked on projects in (1) unsupervised learning for improving diagnosis from biomedical signals, (2) zero-shot communication between human and AI agents, and (3) a responsive "Rhythm Bots" robotics art exhibit. I'm excited to further explore ways we can use machine learning to search for algorithms and policies that exhibit desirable emergent behavior or bio-inspired collective intelligence.
+I'm broadly interested in developing algorithms for learning structure from complex data and leveraging this structure to create more efficient, adaptable processes. Most recently, I've worked on projects in (1) unsupervised learning for improving diagnosis from biomedical signals, (2) zero-shot communication between human and AI agents, and (3) a responsive "Rhythm Bots" robotic art exhibit. I'm excited to further explore ways we can use machine learning to search for algorithms and policies that exhibit desirable emergent behavior or bio-inspired collective intelligence.
 
 Previously, I received my A.B in Computer Science with a secondary in Economics and Chinese Language Citation from Harvard University. My undergraduate thesis, advised by Prof. David Parkes and Dr. Sarah Keren, applied market-based techniques to enable cooperative multi-robot environment mapping under uncertainty. 
 
