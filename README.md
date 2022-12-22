@@ -1,32 +1,299 @@
-# [Hugo Portfolio Theme](https://github.com/wowchemy/starter-hugo-portfolio-theme)
+## Cactus
 
-[![Screenshot](./preview.png)](https://wowchemy.com/hugo-themes/)
+A hugo theme for personal blog. Fork from hexo theme [cactus](https://github.com/probberechts/hexo-theme-cactus) created by @probberechts.
 
-The **Hugo Portfolio Template** empowers you to easily create a portfolio website. Make it your own by choosing a color theme and grid layout!
+[Live demo on github pages](https://www.takuzen.me/hugo-theme-cactus/).
 
-️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, widget-based Wowchemy page builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+Some works are still in progress. See [TODOS](#todos) below.
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://wowchemy.com/hugo-themes/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/wowchemy?label=Follow%20on%20Twitter)](https://twitter.com/wowchemy)
+## Install
 
-[Check out the latest demo](https://hugo-portfolio-theme.netlify.app/) of what you'll get in less than 10 minutes, or [view the showcase](https://wowchemy.com/creators/).
+1. clone cactus to your hugo site's `themes` folder.
+```
+git clone https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus
+```
 
-The integrated [**Wowchemy**](https://wowchemy.com) website builder and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
+2. change your theme to cactus in your site config
+```toml
+# config.toml
 
-- 👉 [**Get Started**](https://wowchemy.com/hugo-themes/)
-- 📚 [View the **documentation**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy research community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- ⬇️ **Automatically import citations from BibTeX** with the [Hugo Academic CLI](https://github.com/wowchemy/hugo-academic-cli)
-- 🐦 Share your new site with the community: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=(%23MadeWithWowchemy%20OR%20%23MadeWithAcademic)&src=typed_query)
-- 🗳 [Take the survey and help us improve #OpenSource](https://forms.gle/NioD9VhUg7PNmdCAA)
-- 🚀 [Contribute improvements](https://github.com/wowchemy/wowchemy-hugo-themes/blob/main/.github/contributing.md) or [suggest improvements](https://github.com/wowchemy/wowchemy-hugo-themes/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://wowchemy.com/docs/hugo-tutorials/update/) and [Release Notes](https://github.com/wowchemy/wowchemy-hugo-themes/releases)
+theme = "cactus"
+```
 
-## We ask you, humbly, to support this open source movement
+3. config your site. See [Config] or a [complete config sample](exampleSite/config.toml)
+4. test your site
+```
+hugo server
+```
 
-Today we ask you to defend the open source independence of the Wowchemy website builder and themes 🐧
+5. publish your site in your prefered way. See hugo's doc: [Hosting & Deployment](https://gohugo.io/hosting-and-deployment/)
 
-We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
+## Config
 
-### [❤️ Click here to become a GitHub Sponsor, unlocking awesome perks such as _exclusive academic templates and widgets_](https://github.com/sponsors/gcushen)
+### Color themes
+
+```toml
+[params]
+
+  colortheme = "white" # dark, light, white, or classic
+```
+
+### Custom CSS
+
+```toml
+[params]
+  css = ["css/custom.css"]
+```
+
+You can add multiple custom stylesheets which will be loaded after the main theme css.
+For example, the above line will load the CSS-file placed at `/static/css/custom.css`.
+
+### Navigation
+
+```toml
+# Main menu which appears below site header.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
+```
+
+### Homepage settings
+
+* description: description will be displayed in the homepage. Markdown syntax is supported in the description string.
+```toml
+[params]
+
+  description = "Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content. Since websites are viewed far more often than they are edited, Hugo is designed to provide an optimal viewing experience for your website’s end users and an ideal writing experience for website authors."
+```
+
+* set your main section (used as the link for the "writings" title on the homepage)
+
+```toml
+[params]
+  mainSection = "posts"
+```
+
+* change the default main section title from Writings, to something else:
+
+```toml
+[params]
+  mainSectionTitle = "Blog"
+```
+
+* Show only the 5 most recent posts (default)
+
+```toml
+[params]
+  showAllPostsOnHomePage = false
+  postsOnHomePage = 5
+```
+* show all posts
+
+```toml
+[params]
+  showAllPostsOnHomePage = true
+  postsOnHomePage = 5 # this option will be ignored
+```
+
+* show tagsoverview (default) or not
+* 
+```toml
+[params]
+  tagsOverview = true
+```
+
+* display the table of contents inline on blog posts, rather than as part of the navigation menu:
+
+```toml
+[params]
+  tocInline = true
+```
+
+* show projects list (default) or not.
+
+```toml
+[params]
+  showProjectsList = true
+  projectsUrl = "https://github.com/monkeyWzr"
+```
+
+Projects section will not be shown if no data file is detected. See [Projects list](#projects-list) below.
+
+### Projects list
+
+Create your projects data file `data/projects.yaml|toml|json`. Hugo support yaml, toml and json formats.
+for former hexo cactus users: please assign your json array to a `list` key.
+
+for example, `data/projects.json`:
+```json
+{
+   "list": [
+      {
+         "name":"Hexo",
+         "url":"https://hexo.io/",
+         "desc":"A fast, simple & powerful blog framework"
+      },
+      {
+         "name":"Font Awesome",
+         "url":"http://fontawesome.io/",
+         "desc":"The iconic font and CSS toolkit"
+      }
+   ]
+}
+```
+
+### Social media links
+
+```toml
+[[params.social]]
+  name = "github"
+  link = "https://github.com/monkeyWzr"
+
+[[params.social]]
+  name = "email"
+  link = "monkeywzr@gmail.com" # no need for "mailto:" at the start
+
+[[params.social]]
+  name = "linkedin"
+  link = "https://www.linkedin.com/in/monkeywzr/"
+```
+
+The `name` key expects the name of a [Font Awesome icon](https://fontawesome.com/icons?d=gallery&s=brands).
+
+### Copyright
+
+Assign your copy right to `.Site.Copyright`. Cactus will append current year to the head.
+
+TODO: Customizable copyright year
+
+```toml
+copyright = "Zeran Wu" # cactus theme will use site title if copyright is not set
+```
+
+### Comments
+
+Comments is disabled by default. Enable comments in your `.Site.Params`.
+```toml
+[params]
+  [params.comments]
+    enabled = true
+    # engine = "disqus" # in progress
+```
+
+You can also enable/disable comments per post. in your posts' front matter, add:
+```yaml
+comments: true
+```
+
+The site config is ignored when `comments` option exists in front matter.
+
+The default engine is disqus. **By now only disqus is supported in cactus.** I will add more options sooner or later. See [Comments Alternatives](https://gohugo.io/content-management/comments/#comments-alternatives)
+
+Before using disqus, you need to register and get your [disqus shortname](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Assign your shortname in `.Site.disqusShortname`, or cactus will use `.Site.Title` by default.
+
+```
+disqusShortname = "wzr" # cactus will use site title if not set
+```
+
+### highlight
+
+Use hugo's built-in [syntax highlighting](https://gohugo.io/getting-started/configuration-markup#highlight).
+
+default config:
+
+```toml
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+```
+
+### Analytics
+
+Cactus uses hugo's bulit in analytics templates. Check [hugo's documents](https://gohugo.io/templates/internal#google-analytics) for details.
+
+Set you tracking id in your site config.
+```toml
+googleAnalytics = "UA-XXXXXXXX-XX" # or G-XXXXXXXX if you are using Google Analytics v4 (gtag.js)
+```
+
+If you are using Google Analytics v3 (analytics.js), you can switch to asynchronous tracking by set `params.googleAnalyticsAsync` to `true`.
+```toml
+[params]
+googleAnalyticsAsync = true # not required
+```
+
+### RSS
+
+The rss feed is not generated by default. you can enable it in your site config:
+
+```toml
+[params]
+  rss = true
+```
+
+The rss link will be `https://example.com/index.xml` assuming your `baseURL` is set to `https://example.com/`
+
+Please also check [Configure RSS](https://gohugo.io/templates/rss/#configure-rss)
+
+### Mathjax
+
+Cactus supports mathjax. Just add `mathjax` option in your site config:
+```toml
+[params]
+  mathjax = true  # not required
+```
+
+You can also enable/disable mathjax per post. In your posts' front matter, add:
+```yaml
+mathjax: true # or false
+```
+
+The site config will be ignored when `mathjax` option exists in front matter.
+
+### Archive 
+Pagination on posts archive can be disabled to show all posts in chronological order
+
+```toml
+[params]
+  showAllPostsArchive = true # or false (default)
+```
+
+## TODOS
+
+- [ ] More comments engines
+- [x] RSS
+- [ ] I18n
+- [x] Analytics
+- [ ] Local Search
+- [ ] toc template
+- [ ] Customizable copyright year
+- [ ] gallery
+- [ ] expose [mathjax configuration](https://docs.mathjax.org/en/latest/web/configuration.html#web-configuration) 
+
+## License
+
+MIT
